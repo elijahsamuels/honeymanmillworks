@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
@@ -10,15 +11,16 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import TheMenu from "./TheMenu" 
+import HomeIcon from '@material-ui/icons/Home';
+import TheMenu from "./TheMenu";
 
-const navLinks = [
-    { title: `about`, path: `/about` },
-    { title: `gallery`, path: `/gallery` },
-    { title: `kitchens`, path: `/kitchens` },
-    { title: `contact`, path: `/contact` },
-    { title: `elevator`, path: `/elevator` },
-];
+// const navLinks = [
+//     { title: `about`, path: `/about` },
+//     { title: `gallery`, path: `/gallery` },
+//     { title: `kitchens`, path: `/kitchens` },
+//     { title: `contact`, path: `/contact` },
+//     { title: `elevator`, path: `/elevator` },
+// ];
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,9 +80,12 @@ function Nav(props) {
         <React.Fragment>
             <CssBaseline />
             <AppBar position="static">
-                <IconButton align="right" edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-					<TheMenu className={classes.topRightBox}/>
-                    {/* <MenuIcon /> */}
+                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <Link to="/">
+					<HomeIcon />
+					</Link>
+
+					<TheMenu />
                 </IconButton>
 
                 {/* <Toolbar>
