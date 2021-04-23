@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -12,7 +12,6 @@ import SendIcon from "@material-ui/icons/Send";
 import MenuIcon from "@material-ui/icons/Menu";
 import { BsFillInfoCircleFill, BsDot } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
-
 
 const StyledMenu = withStyles({
     paper: {
@@ -56,6 +55,9 @@ function TheMenu() {
         setAnchorEl(null);
     };
 
+    const Nav = (props) => (
+        <NavLink exact {...props} activeClassName="active" />
+    );
     return (
         <div>
             <Button
@@ -72,55 +74,69 @@ function TheMenu() {
                 keepMounted
                 open={Boolean(anchorEl)}
                 onClose={handleClose}>
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <BsFillInfoCircleFill fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="About" />
-                </StyledMenuItem>
-<Link>
-</Link>
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <BsDot fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Kitchens" />
-                </StyledMenuItem>
 
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <BsDot fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Wall Units" />
-                </StyledMenuItem>
+                <NavLink to="/about">
+                    <StyledMenuItem as={Link} to="/about">
+                        <ListItemIcon>
+                            <BsFillInfoCircleFill fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="About" />
+                    </StyledMenuItem>
+                </NavLink>
 
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <BsDot fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Vanities" />
-                </StyledMenuItem>
+                <NavLink to="/kitchens">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <BsDot fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Kitchens" />
+                    </StyledMenuItem>
+                </NavLink>
 
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <BsDot fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Elevator Interiors" />
-                </StyledMenuItem>
+                <NavLink to="/wallunits">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <BsDot fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Wall Units" />
+                    </StyledMenuItem>
+                </NavLink>
 
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <BsDot fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Gallery" />
-                </StyledMenuItem>
+                <NavLink to="/vanities">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <BsDot fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Vanities" />
+                    </StyledMenuItem>
+                </NavLink>
 
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <IoMdMail fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Contact" />
-                </StyledMenuItem>
+                <NavLink to="/elevatorinteriors">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <BsDot fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Elevator Interiors" />
+                    </StyledMenuItem>
+                </NavLink>
+
+                <NavLink to="/gallery">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <BsDot fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Gallery" />
+                    </StyledMenuItem>
+                </NavLink>
+
+                <NavLink to="/contact">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <IoMdMail fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Contact" />
+                    </StyledMenuItem>
+                </NavLink>
             </StyledMenu>
         </div>
     );

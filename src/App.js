@@ -20,13 +20,13 @@ function App() {
                 <header>
                     <Nav />
                 </header>
-
-                <Home />
                 <Switch>
-                        <Route exact path="/" component={Kitchens} />
+                        <Route exact path="/" component={Home} />
                         <Route exact path="/about" component={About} />
-                        <Route exact path="/wallunits" component={WallUnits} />
                         <Route exact path="/elevatorinteriors" component={ElevatorInteriors} />
+                        <Route exact path="/kitchens" component={Kitchens} />
+                        <Route exact path="/wallunits" component={WallUnits} />
+                        <Route exact path="/vanities" component={Vanities} />
                         <Route exact path="/gallery" component={Gallery} />
                         <Route exact path="/contact" component={Contact} />
                         <Route component={Error} />
