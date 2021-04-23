@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -77,7 +78,8 @@ function TheMenu() {
                     </ListItemIcon>
                     <ListItemText primary="About" />
                 </StyledMenuItem>
-
+<Link>
+</Link>
                 <StyledMenuItem>
                     <ListItemIcon>
                         <BsDot fontSize="small" />
