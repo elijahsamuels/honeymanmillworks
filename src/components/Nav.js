@@ -10,7 +10,7 @@ import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+// import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from '@material-ui/icons/Home';
 import TheMenu from "./TheMenu";
 
@@ -87,10 +87,6 @@ function Nav(props) {
 
 					<TheMenu />
                 </IconButton>
-
-                {/* <Toolbar>
-                    <Typography variant="h6">Welcome</Typography>
-                </Toolbar> */}
             </AppBar>
 
             <Toolbar id="back-to-top-anchor" />

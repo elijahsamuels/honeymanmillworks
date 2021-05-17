@@ -6,9 +6,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import DraftsIcon from "@material-ui/icons/Drafts";
-import SendIcon from "@material-ui/icons/Send";
+// import InboxIcon from "@material-ui/icons/MoveToInbox";
+// import DraftsIcon from "@material-ui/icons/Drafts";
+// import SendIcon from "@material-ui/icons/Send";
 import MenuIcon from "@material-ui/icons/Menu";
 import { BsFillInfoCircleFill, BsDot } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
@@ -55,9 +55,9 @@ function TheMenu() {
         setAnchorEl(null);
     };
 
-    const Nav = (props) => (
-        <NavLink exact {...props} activeClassName="active" />
-    );
+    // const Nav = (props) => (
+    //     <NavLink exact {...props} activeClassName="active" />
+    // );
     return (
         <div>
             <Button
@@ -126,6 +126,15 @@ function TheMenu() {
                             <BsDot fontSize="small" />
                         </ListItemIcon>
                         <ListItemText primary="Gallery" />
+                    </StyledMenuItem>
+                </NavLink>
+
+                <NavLink to="/woods">
+                    <StyledMenuItem>
+                        <ListItemIcon>
+                            <BsDot fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary="Woods" />
                     </StyledMenuItem>
                 </NavLink>
 
